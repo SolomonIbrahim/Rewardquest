@@ -1,0 +1,152 @@
+:root {
+  --primary-color: #06668E;
+  --light-bg: #f7f7f7;
+  --dark-text: #333;
+  --mid-text: #666;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--light-bg);
+  color: var(--dark-text);
+  line-height: 1.6;
+}
+
+header {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 40px 20px 20px;
+  position: relative;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-toggle {
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav.active {
+  flex-direction: column;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.feature-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.feature-card h3 {
+  font-size: 22px;
+  color: var(--primary-color);
+}
+
+.feature-card p {
+  font-size: 16px;
+  color: var(--mid-text);
+}
+
+.download-btn {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 15px 30px;
+  font-size: 18px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: #044f6e;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.cta {
+  background-color: #f4f4f4;
+  padding: 40px 20px;
+  text-align: center;
+  margin: 40px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cta h2 {
+  font-size: 30px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.cta p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.cta .download-btn {
+  font-size: 20px;
+  padding: 15px 35px;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    display: none;
+  }
+
+  nav.active {
+    display: flex;
+  }
+}
